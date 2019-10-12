@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:title="@string/elements"/>
+    <item android:title="@string/buildings" />
+    <item android:title="@string/critters_amp_eggs" />
+</menu>
