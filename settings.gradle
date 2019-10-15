@@ -1,2 +1,5 @@
-include ':app'
 rootProject.name='onidb'
+
+include ':app',
+        ':data',
+        ':domain'

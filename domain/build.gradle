@@ -1,0 +1,9 @@
+apply plugin: 'kotlin'
+
+sourceCompatibility = compiler.java
+targetCompatibility = compiler.java
+
+dependencies {
+    implementation rootProject.ext.dependencies.kotlinStdlib
+    implementation rootProject.ext.dependencies.rxJava
+}

@@ -1,0 +1,31 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+
+android {
+    compileSdkVersion rootProject.ext.android.compileSdk
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.android.minSdk
+        targetSdkVersion rootProject.ext.android.targetSdk
+
+        versionCode rootProject.ext.application.versionCode
+        versionName rootProject.ext.application.versionName
+    }
+
+    sourceSets {
+        main.java.srcDirs += 'src/main/kotlin'
+    }
+}
+
+dependencies {
+    implementation project(':domain')
+
+    implementation rootProject.ext.dependencies.kotlinStdlib
+    implementation rootProject.ext.dependencies.moshi
+    implementation rootProject.ext.dependencies.okhttp
+    implementation rootProject.ext.dependencies.retrofit
+    implementation rootProject.ext.dependencies.rxJava
+
+    kapt rootProject.ext.dependencies.moshiCodegen
+}
